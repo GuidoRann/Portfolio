@@ -55,7 +55,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <AiFillGithub className="hover:scale-125 hover:text-gray-800 transition-all" />
+              <AiFillGithub className="hover:scale-125 hover:text-gray-800 dark:hover:text-gray-600 transition-all" />
             </a>
           </div>
           <div className="relative overflow-hidden bg-gradient-to-b from-teal-500 rounded-full mx-auto w-[210px]">
