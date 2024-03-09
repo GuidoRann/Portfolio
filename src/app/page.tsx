@@ -1,3 +1,5 @@
+"use client";
+
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import Image from "next/image";
@@ -5,48 +7,56 @@ import Perfil from "../../public/Imagen/perfil.png";
 import Diseño from "../../public/Imagen/design.png";
 import Consulta from "../../public/Imagen/consulting.png";
 import Codigo from "../../public/Imagen/code.png";
-import Web1 from "../../public/Imagen/web3.png";
+import Web1 from "../../public/Imagen/web memo.png";
 import { useState } from "react";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
-
+  const [darkMode, setDarkMode] = useState<Boolean>(false);
   return (
     <div className={darkMode ? "dark" : ""}>
-      <main className="bg-[#fafafa] px-8 md:px-20 lg:px-40 font-Poppins dark:bg-gray-800">
+      <main className="bg-[#fafafa] dark:text-slate-200 px-8 md:px-20 lg:px-40 font-Poppins dark:bg-gray-800">
         <section>
-          <nav className="py-10 mb-12 flex justify-between">
-            <h1 className="text-lg font-Burtons">GuidoCode</h1>
+          <nav className="py-10 mb-12 flex justify-between ">
+            <h1 className="flex items-center text-lg font-Burtons">
+              GuidoCode
+            </h1>
             <ul className="flex items-center">
               <li>
-                <BsFillMoonStarsFill
-                  className="cursor-pointer text-xl"
-                  onClick={() => setDarkMode(!darkMode)}
-                />
-              </li>
-              <li>
-                <a
-                  className="bg-cyan-500 text-white px-2 py-2 rounded-md ml-4"
-                  href="#"
-                >
-                  Resume
-                </a>
+                <label className="relative inline-flex items-center cursor-pointer">
+                  <input className="sr-only peer" value="" type="checkbox" />
+                  <div
+                    className="w-10 h-10 lg:w-12 lg:h-12 rounded-full ring-0 peer duration-500 outline-none bg-gray-200 overflow-hidden before:flex before:items-center before:justify-center after:flex after:items-center after:justify-center before:content-['☀️'] before:absolute before:h-8 lg:before:h-10 before:w-8 lg:before:w-10 before:top-1/2 before:bg-white before:rounded-full before:left-1 before:-translate-y-1/2 before:transition-all before:duration-700 peer-checked:before:opacity-0 peer-checked:before:rotate-90 peer-checked:before:-translate-y-full shadow-lg shadow-gray-400 peer-checked:shadow-lg peer-checked:shadow-gray-700 peer-checked:bg-[#383838] after:content-['🌑'] after:absolute after:bg-[#1d1d1d] after:rounded-full after:top-[4px] after:right-1 after:translate-y-full after:w-8 lg:after:w-10 after:h-8 lg:after:h-10 after:opacity-0 after:transition-all after:duration-700 peer-checked:after:opacity-100 peer-checked:after:rotate-180 peer-checked:after:translate-y-0"
+                    onClick={() => setDarkMode(!darkMode)}
+                  ></div>
+                </label>
               </li>
             </ul>
           </nav>
           <div className="flex flex-col items-center p-5">
-            <h2 className="text-4xl py-2 text-teal-600 font-medium md:text-6xl lg:text-8xl">
+            <h2 className="text-4xl py-2 text-teal-600 dark:text-teal-500 font-medium md:text-6xl lg:text-8xl">
               Guido López
             </h2>
             <h3 className="text-2xl py-3">Web Developer</h3>
-            <p className="text-base pt-5 pb-4 leading-8 text-gray-800 max-w-xl">
+            <p className="text-base pt-5 pb-4 leading-8 text-gray-800 dark:text-slate-200 max-w-xl">
               Freelancer Junior ofreciendo servicios para programación y diseño
               de contenido. ¡Puedes ver mas sobre mi en los siguientes links!
             </p>
           </div>
-          <div className="text-5xl flex justify-center gap-16 text-gray-600 pb-6">
-            <AiFillLinkedin className="hover:scale-125 hover:text-blue-400 transition-all" />
-            <AiFillGithub className="hover:scale-125 hover:text-gray-800 transition-all" />
+          <div className="text-5xl flex justify-center gap-16 text-gray-600 dark:text-slate-500 pb-6">
+            <a
+              href="https://www.linkedin.com/in/guido-rann-722458292/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <AiFillLinkedin className="hover:scale-125 hover:text-blue-400 transition-all" />
+            </a>
+            <a
+              href="https://github.com/GuidoRann"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <AiFillGithub className="hover:scale-125 hover:text-gray-800 transition-all" />
+            </a>
           </div>
           <div className="relative overflow-hidden bg-gradient-to-b from-teal-500 rounded-full mx-auto w-[210px]">
             <Image src={Perfil} alt="Avatar de Guido López" objectFit="cover" />
@@ -56,7 +66,7 @@ export default function Home() {
         <section>
           <div className="flex flex-col items-center pt-7 ">
             <h3 className="text-2xl py-3">Servicio que ofrezco</h3>
-            <p className="text-base pt-5 leading-8 text-gray-800 max-w-xl">
+            <p className="text-base pt-5 leading-8 text-gray-800 dark:text-slate-200 max-w-xl">
               Soy un apasionado del desarrollador web especializado en
               tecnologías como React, TypeScript y JavaScript, comprometido en
               crear experiencias digitales dinámicas y atractivas para los
@@ -66,66 +76,92 @@ export default function Home() {
               contribuir en equipos dinámicos y colaborativos.
             </p>
           </div>
-          <div>
+          <div className="lg:flex gap-10">
             <div className="flex flex-col items-center shadow-lg p-8 rounded-xl my-10">
               <div>
                 <Image src={Diseño} alt="Icono diseño" width={120} />
               </div>
               <h3 className="text-2xl pt-6 pb-3">Diseño grafico</h3>
-              <p className="text-base pt-5 pb-4 leading-8 text-gray-800 max-w-xl">
+              <p className="text-base pt-5 pb-4 leading-8 text-gray-800 dark:text-slate-200 max-w-xl">
                 Creando diseños elegantes adaptados a tus necesidades siguiendo
                 la teoría fundamental del diseño.
               </p>
-              <h4 className="py-4 text-teal-600 font-medium">
+              <h4 className="py-4 text-teal-600 dark:text-teal-500 font-medium">
                 Herramientas que uso
               </h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
+              <p className="text-gray-800 dark:text-slate-200 py-1">
+                Photoshop
+              </p>
+              <p className="text-gray-800 dark:text-slate-200 py-1">
+                Illustrator
+              </p>
+              <p className="text-gray-800 dark:text-slate-200 py-1">Figma</p>
             </div>
             <div className="flex flex-col items-center shadow-lg p-8 rounded-xl my-10">
               <div className="flex justify-center">
                 <Image src={Codigo} alt="Icono diseño" width={120} />
               </div>
               <h3 className="text-2xl pt-6 pb-3">Codigo</h3>
-              <p className="text-base pt-5 pb-4 leading-8 text-gray-800 max-w-xl">
+              <p className="text-base pt-5 pb-4 leading-8 text-gray-800 dark:text-slate-200 max-w-xl">
                 ¿Tienes una idea para tu próximo gran sitio web? Hagámoslo
                 realidad.
               </p>
-              <h4 className="pt-3 pb-2 text-teal-600 font-medium">
+              <h4 className="pt-3 pb-2 text-teal-600 dark:text-teal-500 font-medium">
                 Herramientas que uso
               </h4>
-              <h3 className="py-2 text-teal-600 font-medium">Frontend</h3>
-              <p className="text-gray-800 py-1">React</p>
-              <p className="text-gray-800 py-1">JavaScript</p>
-              <p className="text-gray-800 py-1">Typescript</p>
-              <p className="text-gray-800 py-1">Tailwind</p>
-              <h3 className="py-2 text-teal-600 font-medium">Backend</h3>
-              <p className="text-gray-800 py-1">Java</p>
-              <p className="text-gray-800 py-1">Spring Boot</p>
-              <p className="text-gray-800 py-1">MySQL</p>
+              <div className="flex flex-row gap-10 lg:gap-12">
+                <div>
+                  <h3 className="py-2 text-teal-600 dark:text-teal-500 font-medium">
+                    Frontend
+                  </h3>
+                  <p className="text-gray-800 dark:text-slate-200 py-1">
+                    React
+                  </p>
+                  <p className="text-gray-800 dark:text-slate-200 py-1">
+                    JavaScript
+                  </p>
+                  <p className="text-gray-800 dark:text-slate-200 py-1">
+                    Typescript
+                  </p>
+                  <p className="text-gray-800 dark:text-slate-200 py-1">
+                    Tailwind
+                  </p>
+                </div>
+                <div>
+                  <h3 className="py-2 text-teal-600 dark:text-teal-500 font-medium">
+                    Backend
+                  </h3>
+                  <p className="text-gray-800 dark:text-slate-200 py-1">Java</p>
+                  <p className="text-gray-800 dark:text-slate-200 py-1">
+                    Spring Boot
+                  </p>
+                  <p className="text-gray-800 dark:text-slate-200 py-1">
+                    MySQL
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="flex flex-col items-center shadow-lg p-8 rounded-xl my-10">
-            <div className="flex justify-center">
-              <Image src={Consulta} alt="Icono diseño" width={120} />
+            <div className="flex flex-col items-center shadow-lg p-8 rounded-xl my-10">
+              <div className="flex justify-center">
+                <Image src={Consulta} alt="Icono diseño" width={120} />
+              </div>
+              <h3 className="text-2xl pt-6 pb-3">Consultas</h3>
+              <p className="text-base pt-5 pb-4 leading-8 text-gray-800 dark:text-slate-200 max-w-xl">
+                ¿Estás interesado en recibir comentarios sobre tu proyecto
+                actual? Puedo darte consejos e ideas para mejorarlo.
+              </p>
+              <h4 className="py-4 text-teal-600 dark:text-tel-500 font-medium">
+                Herramientas que uso
+              </h4>
+              <p className="text-gray-800 dark:text-slate-200 py-1">Meet</p>
             </div>
-            <h3 className="text-2xl pt-6 pb-3">Consultas</h3>
-            <p className="text-base pt-5 pb-4 leading-8 text-gray-800 max-w-xl">
-              ¿Estás interesado en recibir comentarios sobre tu proyecto actual?
-              Puedo darte consejos e ideas para mejorarlo.
-            </p>
-            <h4 className="py-4 text-teal-600 font-medium">
-              Herramientas que uso
-            </h4>
-            <p className="text-gray-800 py-1">Meet</p>
           </div>
         </section>
 
         <section>
           <div className="flex flex-col items-center">
             <h3 className="text-3xl pt-6 pb-3">Portfolio</h3>
-            <p className="text-base pt-5 pb-4 leading-8 text-gray-800 max-w-xl">
+            <p className="text-base pt-5 pb-4 leading-8 text-gray-800 dark:text-slate-200 max-w-xl">
               Desde el inicio de mi trayectoria como diseñador y desarrollador
               freelance, he realizado trabajos remotos y colaborado con personas
               talentosas para crear productos digitales tanto para uso
@@ -133,47 +169,7 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col items-center gap-8 py-10 lg:flex-row lg:flex-wrap">
-            <div className="basis-1/3 flex-1 ">
-              <Image
-                src={Web1}
-                alt="Imagen de la web de muestra"
-                className="rounded-lg object-cover"
-                layout="responsive"
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                src={Web1}
-                alt="Imagen de la web de muestra"
-                className="rounded-lg object-cover"
-                layout="responsive"
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                src={Web1}
-                alt="Imagen de la web de muestra"
-                className="rounded-lg object-cover"
-                layout="responsive"
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                src={Web1}
-                alt="Imagen de la web de muestra"
-                className="rounded-lg object-cover"
-                layout="responsive"
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                src={Web1}
-                alt="Imagen de la web de muestra"
-                className="rounded-lg object-cover"
-                layout="responsive"
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
+            <div className="basis-1/2 lg:basis-1/3 flex-1">
               <Image
                 src={Web1}
                 alt="Imagen de la web de muestra"
