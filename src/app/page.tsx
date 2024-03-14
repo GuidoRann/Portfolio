@@ -1,7 +1,7 @@
 "use client";
 
-import { BsFillMoonStarsFill } from "react-icons/bs";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import { SiBrave, SiTailwindcss, SiReact, SiTypescript } from "react-icons/si";
 import Image from "next/image";
 import Perfil from "../../public/Imagen/perfil.png";
 import Diseño from "../../public/Imagen/design.png";
@@ -168,15 +168,57 @@ export default function Home() {
               empresarial como para consumidores.
             </p>
           </div>
-          <div className="flex flex-col items-center gap-8 py-10 lg:flex-row lg:flex-wrap">
-            <div className="basis-1/2 lg:basis-1/3 flex-1">
+          <div className="flex flex-col justify-center items-center gap-8 py-10 lg:flex-row lg:flex-wrap">
+          {/* comienzo de la tarjeta proyecto web */}
+            <div className="basis-1/2 lg:basis-1/3 shadow-lg p-8 rounded-xl my-10 px-2">
+              <h3 className="text-lg font-medium py-2 text-teal-600 dark:text-tel-500 text-center">MemoMagic</h3>
+              <p className="py-3">App de memotest hecho desde cero, con el tipico juego de encontra las parejas, pero con un estilo propio, tiempo de juego e intentos</p>
+              <div className="flex justify-center p-1 flex-wrap gap-2">
+                <div className="flex items-center justify-center rounded-full border-2 border-teal-600 px-2 gap-1">
+                  <SiReact className="text-[#61DBFB]" />
+                  <p>React</p>
+                </div>
+                <div className="flex items-center justify-center rounded-full border-2 border-teal-600 px-2 gap-1">
+                  <SiTypescript className="text-[#0177C1]" />
+                  <p>Typescript</p>
+                </div>
+                <div className="flex items-center justify-center rounded-full border-2 border-teal-600 px-2 gap-1">
+                  <SiTailwindcss className="text-[#39BCF8]" />
+                  <p>Tailwind</p>
+                </div>
+              </div>
               <Image
                 src={Web1}
                 alt="Imagen de la web de muestra"
                 className="rounded-lg object-cover"
                 layout="responsive"
               />
+              <div className="flex justify-center items-center pt-4 gap-2">
+                  <a
+                  href="https://memotest-nine.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
+                  <div className="flex items-center justify-center rounded-md border-[1px] bg-gradient-to-b from-slate-300 dark:bg-gradient-to-b dark:from-teal-500 border-slate-300 dark:border-teal-600 p-2 px-2 gap-1 hover:scale-105 transition-all">
+                      <SiBrave className="text-[#F63315] dark:text-slate-100 w-[23px] h-[23px] " />
+                      <p>Pagina web</p>
+                    </div>
+                  </a>
+                  <a
+                    href="https://github.com/GuidoRann"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="flex items-center justify-center rounded-md border-[1px] bg-gradient-to-b from-slate-300 dark:bg-gradient-to-b dark:from-teal-500 border-slate-300 dark:border-teal-600 p-2 px-2 gap-1 hover:scale-105 transition-all">
+                        <AiFillGithub className="w-[23px] h-[23px]" />
+                        <p>Repositorio</p>
+                      </div>
+                  </a>
+              </div>
             </div>
+            {/* final de la tarjeta proyecto web */}
+            
+            
           </div>
         </section>
       </main>
