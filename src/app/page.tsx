@@ -66,12 +66,11 @@ export default function Home() {
         <section>
           <div className="flex flex-col items-center pt-7 ">
             <h3 className="text-2xl py-3">Servicio que ofrezco</h3>
-            <p className="text-base pt-5 leading-8 text-gray-800 dark:text-slate-200 max-w-xl">
+            <p className="text-base pt-5 leading-8 text-gray-800 dark:text-slate-200">
               Soy un apasionado del desarrollador web especializado en
               tecnologías como React, TypeScript y JavaScript, comprometido en
               crear experiencias digitales dinámicas y atractivas para los
-              usuarios.
-              <br /> Estoy emocionado por seguir aprendiendo y creciendo en el
+              usuarios. Estoy emocionado por seguir aprendiendo y creciendo en el
               campo del desarrollo web, y estoy buscando oportunidades para
               contribuir en equipos dinámicos y colaborativos.
             </p>
