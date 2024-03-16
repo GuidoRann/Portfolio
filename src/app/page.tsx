@@ -161,7 +161,7 @@ export default function Home() {
         <section>
           <div className="flex flex-col items-center">
             <h3 className="text-3xl pt-6 pb-3">Portfolio</h3>
-            <p className="text-base pt-5 pb-4 leading-8 text-gray-800 dark:text-slate-200 max-w-xl">
+            <p className="text-base pt-5 pb-4 leading-8 text-gray-800 dark:text-slate-200">
               Desde el inicio de mi trayectoria como diseñador y desarrollador
               freelance, he realizado trabajos remotos y colaborado con personas
               talentosas para crear productos digitales tanto para uso
