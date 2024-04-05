@@ -33,7 +33,7 @@ export default function Home() {
             </ul>
           </nav>
           <div className="flex flex-col items-center p-5">
-            <h2 className="text-4xl py-2 text-teal-600 dark:text-teal-500 font-medium md:text-6xl lg:text-8xl">
+            <h2 className="text-5xl py-2 text-teal-600 dark:text-teal-500 font-medium md:text-6xl lg:text-8xl">
               Guido López
             </h2>
             <h3 className="text-2xl py-3">Web Developer</h3>
@@ -44,7 +44,7 @@ export default function Home() {
           </div>
           <div className="text-5xl flex justify-center gap-16 text-gray-600 dark:text-slate-500 pb-6">
             <a
-              href="https://www.linkedin.com/in/guido-rann-722458292/"
+              href="https://www.linkedin.com/in/guido-rann"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -170,9 +170,9 @@ export default function Home() {
           <div className="flex flex-col justify-center items-center gap-8 py-10 lg:flex-row lg:flex-wrap">
           {/* comienzo de la tarjeta proyecto web */}
             <div className="basis-1/2 lg:basis-1/3 shadow-lg p-8 rounded-xl my-10 px-2">
-              <h3 className="text-lg font-medium py-2 text-teal-600 dark:text-tel-500 text-center">MemoMagic</h3>
+              <h3 className="text-3xl font-medium py-1 text-teal-600 dark:text-tel-500 text-center">MemoMagic</h3>
               <p className="py-3">App de memotest hecho desde cero, con el tipico juego de encontra las parejas, pero con un estilo propio, tiempo de juego e intentos</p>
-              <div className="flex justify-center p-1 flex-wrap gap-2 text-[11px]">
+              <div className="flex justify-center p-2 flex-wrap gap-2 text-[11px]">
                 <div className="flex items-center justify-center rounded-full border-2 border-teal-600 px-2 gap-1">
                   <SiReact className="text-[#61DBFB]" />
                   <p>React</p>
