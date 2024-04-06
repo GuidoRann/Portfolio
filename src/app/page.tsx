@@ -80,7 +80,7 @@ export default function Home() {
               <div>
                 <Image src={Diseño} alt="Icono diseño" width={120} />
               </div>
-              <h3 className="text-2xl pt-6 pb-3">Diseño grafico</h3>
+              <h3 className="text-2xl pt-6 pb-3">Diseño gráfico</h3>
               <p className="text-base pt-5 pb-4 leading-8 text-gray-800 dark:text-slate-200 max-w-xl">
                 Creando diseños elegantes adaptados a tus necesidades siguiendo
                 la teoría fundamental del diseño.
@@ -100,7 +100,7 @@ export default function Home() {
               <div className="flex justify-center">
                 <Image src={Codigo} alt="Icono diseño" width={120} />
               </div>
-              <h3 className="text-2xl pt-6 pb-3">Codigo</h3>
+              <h3 className="text-2xl pt-6 pb-3">Código</h3>
               <p className="text-base pt-5 pb-4 leading-8 text-gray-800 dark:text-slate-200 max-w-xl">
                 ¿Tienes una idea para tu próximo gran sitio web? Hagámoslo
                 realidad.
